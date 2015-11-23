@@ -83,6 +83,7 @@ function memoryFlipTile(tile,val){
 				if(tiles_flipped === memory_array.length){
 					alert("Let's play again!");
 					document.getElementById('gameboard').innerHTML = "";
+					turnCount = 0;
 					newBoard();
 				}
 			} else {
@@ -130,6 +131,18 @@ var currentPlayer = function(){
 		console.log(playerID);
 	}
 };
+
+//// RESET BUTTON
+
+
+$('#resetButton').on('click', function(){  
+	newBoard();
+	turnCount =0;
+	$('#player1Score').html('&nbsp;');
+	$('#player2Score').html('&nbsp');
+	player1Score = 1;
+	player2Score = 1;
+});
 
 
 ////// IN SCORING SECTION: IF CURRENT PLAYER IS 1, update 
