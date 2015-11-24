@@ -1,7 +1,7 @@
-
+@import url(https://fonts.googleapis.com/css?family=Poiret+One|Bangers|Righteous|Lobster+Two);
 
 div#background{
-	background: url("images/kaijubkgrnd.jpg");
+	background: url("images/kaijubkgrnd.png");
 	background-position: center;
 	/*border:black 1px solid;
 	width:800px;
@@ -11,7 +11,7 @@ div#background{
 	height: 100%;
 	width: 100%;
 	position: fixed;
-	 display: block;
+	
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		background-size: cover;
@@ -41,19 +41,123 @@ div#background{
 	margin:10px;
 	padding:20px;
 	text-align:center;
-	
+
+
 
 }
 #headerTitle {
 	text-align: center;
-	font-size: 40px;
-	color: green;
+	font-size: 55px;
+	font-family: "Righteous", sans-serif;
+	padding-top: 2%;
+	text-shadow: 2px 2px #E03FCB;
 
+
+	
+}
+#player1Div, #player2Div {
+	text-align: center;
+	font-size: 44px;
+	font-family: "Bangers", sans-serif;
+	color: black;
+	padding-top: 5%;
+	text-shadow: 3px 2px #3FF245;
+}
+
+
+ 
+
+ /* delete if can't get to work properly */
+a:hover {
+	background: url(images/tkdklogo.png) no-repeat;
+	background-position: center;
+
+}
+
+a, a:hover {
+	text-decoration: none;
+	color: black;
+	cursor: default;
 
 }
 
 
+.modal-backdrop {
+	z-index: -1;
+}
 
+.btn {
+	font-family: "Bangers";
+	font-size: 20px;
+	color: black;
+}
+
+.modal-title, .modal-body {
+	font-family: "Righteous";
+}
+
+.modal-footer {
+	text-align: center;
+}
+#launchModalButton {
+	padding: 30px;
+	
+}
+
+
+/*
+.transbox {
+    background-color: #ffffff;
+    opacity: 0.6;
+}
+*/
+/*
+#resetButton {
+	position: fixed;
+		padding-bottom: -20px;
+}
+
+*/
+/*
+.glyphicon-star {
+	font-size: 20px;
+}
+*/
+
+.footer {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+
+}
+/*
+.starburst {
+	display:block;
+	width:6em;
+	height:6em;
+	background:#fe0;
+	-webkit-transform:rotate(-45deg);
+	-moz-transform:rotate(-45deg);
+	rotation:-45deg;
+	position:relative;
+	top:2em;
+	left:2em;
+	text-align:center;
+	text-decoration:none;
+	color:#000;
+	font-weight:bold;
+	font-family:Arial, sans-serif;
+}
+.starburst span {
+	display:block;
+	width:6em;
+	height:6em;
+	background:#fe0;
+	-webkit-transform:rotate(22.5deg);
+	-moz-transform:rotate(22.5deg);
+	rotation:22.5deg;
+}
+*/
 
 
 

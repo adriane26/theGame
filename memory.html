@@ -12,19 +12,59 @@
 <body>
 <div id="background" class="container-fluid">
 
-	<section id="headerTitle" class="row">
-		<div id="player1Div" class="col-md-4"><p>Player 1</p><span id="player1Score">&nbsp;</span> </div>
-		<div class="col-md-4"><h1>tokidoki</h1> </div>
-		<div id="player2Div" class="col-md-4"><p>Player 2</p><span id="player2Score">&nbsp;</span> </div>
-	</section> <!-- closes row section headertitle--> 
 
 
-<!-- need section to wrap gameboard? --> 
+	<section id="headerSection" class="row">
+		<div id="player1Div" class="col-md-4 transbox"><!--<span class="glyphicon glyphicon-star"></span>-->
+			<p id="player1P">&nbsp;</p><span id="player1Score">&nbsp;</span> </div>
+		<div id="headerTitle" class="col-md-4 transbox toggle">
+			<p class="starburst"><a> tokidoki </a></p> </div>
+		<div id="player2Div" class="col-md-4 transbox toggle"><!--<span class="glyphicon glyphicon-star"></span> -->
+			<p id="player2P">&nbsp;</p>
+			<span id="player2Score">&nbsp;</span> </div>
+	</section> <!-- closes row headerSection--> 
+
+
+
+<!-- /////////////// MODAL /////////// -->
+
+						<section id="startPage" class="row">
+		<div class="col-md-2 col-md-offset-5"> 
+				<button type="button" id="launchModalButton" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">Let's Get Started!
+				</button>
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="myModalLabel">Names, please</h4>
+						</div>
+							<div class="modal-body"> 
+									<form>
+									<label for="player1Name">Player 1: </label>
+									<input class="form-control" type="text" id="player1Name">
+									<label for="player2Name">Player 2: </label>
+									<input class="form-control" type="text" id="player2Name">
+									</form>	
+							</div>
+						<div class="modal-footer"> 
+						<img id="kaijugif" src="images/tkdkkaiju.gif">
+							<button type="button" id="playButton" class="btn btn-warning btn-lg" data-dismiss="modal">Let's Play!</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+					</section> <!-- closes startPage row section-->
+	<!-- ///////// CLOSES MODAL INFO /////////// -->
+
+
+
 
 	<div id="gameboard" class="row row-eq-height col-md-6 col-md-offset-3">
 	</div>  <!-- closes #gameboard div -->
 
-	<section id="bottomRow" class="row">
+	<section id="bottomRow" class="row footer">
 		<div id="reset" class="col-md-4">
 			<button type="reset" id="resetButton" class="btn btn-info btn-lg">RESET</button>
 		</div>
@@ -38,10 +78,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.js"></script>
 	<script type="text/javascript" src="memory.js"></script>
 	
-	<script> $(document).ready(newBoard);
+	<script> //$(document).ready(newBoard);
+	$(document).ready(console.log("hi"));
 
 
  </script>

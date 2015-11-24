@@ -53,7 +53,7 @@ function newBoard(){
 function memoryFlipTile(tile,val){
 	if(tile.innerHTML === "" && memory_values.length < 2){
 		tile.style.background = '#FFF';
-		tile.innerHTML = '<img class="card-img img-reponsive" src="images/'+ val + '.png"/>';
+		tile.innerHTML = '<img src="images/'+ val + '.png"/>';
 		//console.log(tile.innerHTML);
 		if(memory_values.length === 0){
 			memory_values.push(val);
@@ -75,6 +75,11 @@ function memoryFlipTile(tile,val){
             	//////
             	if (playerID ===1){
             		$('#player1Score').html(player1Score++);
+            		
+
+
+
+
             	} else {
             		$('#player2Score').html(player2Score++);
             	}
@@ -123,7 +128,7 @@ var player1Turn = function(){
 var currentPlayer = function(){
 	if (turnCount %2 === 0) {
 		playerID = 1;
-		alert("player1, your turn");
+		alert("player1, your turn"); /////instead of alert, highlight playername
 		console.log(playerID);
 	} else {
 		playerID = 2;
@@ -132,21 +137,97 @@ var currentPlayer = function(){
 	}
 };
 
-//// RESET BUTTON
+///////  RESET BUTTON
 
 
 $('#resetButton').on('click', function(){  
-	newBoard();
+	//newBoard();
 	turnCount =0;
 	$('#player1Score').html('&nbsp;');
 	$('#player2Score').html('&nbsp');
+	$('#player1P').html('&nbsp');
+	$('#player2P').html('&nbsp');
 	player1Score = 1;
 	player2Score = 1;
+	$('#launchModalButton').show();
+	$('#gameboard').html(null);
+
 });
 
 
-////// IN SCORING SECTION: IF CURRENT PLAYER IS 1, update 
-//// how to check which is current player? just update current player's score. 
+////// IN SCORING SECTION: IF current player is 1, highlight animation OR JUST ADD SHADOW TEXT!!
+//
+
+
+
+
+////// mouseover tkdk image
+
+/*
+
+function showLogo(x) {
+    x.style.height = "64px";
+    x.style.width = "64px";
+};
+function normText() {
+
+}
+
+////// event Listeners
+
+player1Input: .submit(e.preventDefault)
+
+var player1Name = function(name) {
+
+}
+
+*/
+
+
+////////// when you click playButton, all of this happens. ////////
+
+$('#playButton').on('click', function(){
+
+	///// capture name values, add to player1Div and player2Div. RESET BUTTON NEEDS TO CLEAR THIS INFO from html
+	var player1Text = $('#player1Name').val();
+	var player2Text = $('#player2Name').val();
+	///// add value to player1div/player2div. if no input, default to "Player 1" and "Player 2"
+		if (!player1Text) {
+			$('#player1P').html('Player 1');
+		} else {
+				$('#player1P').html(player1Text);
+		};
+		if (!player2Text) {
+			$('#player2P').html('Player 2');
+		} else {
+				$('#player2P').html(player2Text);
+		};
+////// clear input values
+	$('#player1Name').val('');
+	$('#player2Name').val('');
+
+	/////// hide "let's get started" button
+	$('#launchModalButton').hide();
+
+		////// finally, playButton will call newBoard();
+		newBoard();
+
+
+
+});  //// create another nbsp in <p></p> instead of player1? 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
