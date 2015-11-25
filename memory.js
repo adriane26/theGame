@@ -1,17 +1,17 @@
 /////// Declaring variables
 var memory_array =[
 	"donutella",
-	"porcinolg",
-	"stellinalg",
-	"lattelg",
-	"bastardinojrlg",
-	"skeletrinalg",
+	"PorcinoLg",
+	"StellinaLg",
+	"LatteLg",
+	"BastardinojrLg",
+	"SkeletrinaLg",
 	"donutella",
-	"porcinolg",
-	"stellinalg",
-	"lattelg",
-	"bastardinojrlg",
-	"skeletrinalg"
+	"PorcinoLg",
+	"StellinaLg",
+	"LatteLg",
+	"BastardinojrLg",
+	"SkeletrinaLg"
 	];
 var memory_values = [];
 var memory_tile_ids = [];
