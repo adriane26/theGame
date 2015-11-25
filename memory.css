@@ -3,11 +3,6 @@
 div#background{
 	background: url("images/kaijubkgrnd.png");
 	background-position: center;
-	/*border:black 1px solid;
-	width:800px;
-	height:540px;
-	padding:24px;
-	margin:0px auto; */
 	height: 100%;
 	width: 100%;
 	position: fixed;
@@ -15,21 +10,7 @@ div#background{
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		background-size: cover;
-
 }
-/* div#gameboard > div{
-	background: url("images/starlogo.gif") no-repeat;
-	background-position: center;
-	border:#000 1px solid;
-	width:20%;
-	height:100%;
-	float:left;
-	margin:10px;
-	padding:20px;
-	text-align:center;
-} */
-
-/* random flippedIMAGEFACES NEED TO BE CONTAINED WITH GAMEBOARD TILE DIVS */
 
 .tile {
 
@@ -42,50 +23,24 @@ div#background{
 	padding:20px;
 	text-align:center;
 
-
-
 }
+
 #headerTitle {
 	text-align: left;
 	font-size: 60px;
 	font-family: "Righteous", sans-serif;
 	padding-top: 2%;
 	color: black;
-	/* text-shadow: 2px 2px #E03FCB; 
-	background-color: rgba(255,255,255, .8);  
-	/*  text shadow color:#E03FCB; ; */
-	text-shadow: 4px 3px 3px #E03FCB;
-
-
+	text-shadow: 3px 2px #E03FCB;
 	
 }
+
 #player1Div, #player2Div {
 	text-align: center;
 	font-size: 44px;
 	font-family: "Bangers", sans-serif;
 	color: black;
 	padding-top: 5%;	
-}
-
- 
-
- /* delete if can't get to work properly 
-a:hover {
-	background: url(images/tkdklogo.png) no-repeat;
-	background-position: center;
-
-}
-
-a, a:hover {
-	text-decoration: none;
-	color: black;
-	cursor: default;
-
-}
-*/
-
-.modal-backdrop {
-	z-index: -1;
 }
 
 .btn {
@@ -95,15 +50,11 @@ a, a:hover {
 	text-shadow: 1px 1px white;
 }
 
-
 #launchModalButton {
 	padding: 20px;
 	font-size: 25px;
-	/* background-color: #D63590; */
 	background-color: #77E70D;
-	/* border: 2px inset #df5386; */
-	border: 2px inset #A7EE63;
-	
+	border: 2px inset #A7EE63;	
 }
 
 #playButton {
@@ -111,6 +62,17 @@ a, a:hover {
 	margin-right: -50px;
 	font-size: 30px;
 	background-color: #E03FCB;
+}
+
+#resetButton {
+	background: url("images/logosm.png") no-repeat;
+	background-position: center;
+	border: none;
+	padding: 20px;
+}
+
+.modal-backdrop {
+	z-index: -1;
 }
 
 .modal-title, .modal-body {
@@ -121,6 +83,7 @@ a, a:hover {
 	font-size: 20px;
 	color: #E03FCB;
 }
+
 .modal-body {
 	font-size: 18px;
 	color: #00cc00;
@@ -130,60 +93,8 @@ a, a:hover {
 	text-align: center;
 }
 
-
-/*
-.transbox {
-    background-color: #ffffff;
-    opacity: 0.6;
-}
-*/
-/*
-#resetButton {
-	position: fixed;
-		padding-bottom: -20px;
-}
-
-*/
-/*
-.glyphicon-star {
-	font-size: 20px;
-}
-*/
-
 .footer {
 	position: absolute;
 	bottom: 20px;
 	left: 20px;
-
 }
-/*
-.starburst {
-	display:block;
-	width:6em;
-	height:6em;
-	background:#fe0;
-	-webkit-transform:rotate(-45deg);
-	-moz-transform:rotate(-45deg);
-	rotation:-45deg;
-	position:relative;
-	top:2em;
-	left:2em;
-	text-align:center;
-	text-decoration:none;
-	color:#000;
-	font-weight:bold;
-	font-family:Arial, sans-serif;
-}
-.starburst span {
-	display:block;
-	width:6em;
-	height:6em;
-	background:#fe0;
-	-webkit-transform:rotate(22.5deg);
-	-moz-transform:rotate(22.5deg);
-	rotation:22.5deg;
-}
-*/
-
-
-
