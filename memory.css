@@ -46,10 +46,11 @@ div#background{
 
 }
 #headerTitle {
-	text-align: center;
+	text-align: left;
 	font-size: 60px;
 	font-family: "Righteous", sans-serif;
 	padding-top: 2%;
+	color: black;
 	/* text-shadow: 2px 2px #E03FCB; 
 	background-color: rgba(255,255,255, .8);  
 	/*  text shadow color:#E03FCB; ; */
@@ -63,17 +64,12 @@ div#background{
 	font-size: 44px;
 	font-family: "Bangers", sans-serif;
 	color: black;
-	padding-top: 5%;
-	/* text-shadow: 3px 2px #3FF245; */
+	padding-top: 5%;	
 }
-#player1Div {
-	text-shadow: 3px 2px #3FF245;
-}
-
 
  
 
- /* delete if can't get to work properly */
+ /* delete if can't get to work properly 
 a:hover {
 	background: url(images/tkdklogo.png) no-repeat;
 	background-position: center;
@@ -86,7 +82,7 @@ a, a:hover {
 	cursor: default;
 
 }
-
+*/
 
 .modal-backdrop {
 	z-index: -1;
@@ -96,18 +92,25 @@ a, a:hover {
 	font-family: "Bangers";
 	font-size: 20px;
 	color: black;
+	text-shadow: 1px 1px white;
 }
 
-.btn-danger {
+
+#launchModalButton {
+	padding: 20px;
+	font-size: 25px;
 	/* background-color: #D63590; */
 	background-color: #77E70D;
 	/* border: 2px inset #df5386; */
 	border: 2px inset #A7EE63;
+	
 }
+
 #playButton {
 	margin-left: 40px;
 	margin-right: -50px;
 	font-size: 30px;
+	background-color: #E03FCB;
 }
 
 .modal-title, .modal-body {
@@ -125,11 +128,6 @@ a, a:hover {
 
 .modal-footer {
 	text-align: center;
-}
-#launchModalButton {
-	padding: 20px;
-	font-size: 25px;
-	
 }
 
 

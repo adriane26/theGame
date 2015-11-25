@@ -87,28 +87,25 @@ function memoryFlipTile(tile,val){
 				// Check to see if the whole board is cleared
 				if(tiles_flipped === memory_array.length){
 					if (player1Score > player2Score) {
-
-						setTimeout(swal({   title: "Player 1: #winning",   text: "Let's play again!",   imageUrl: "images/StrawberryMilkLgcopy.png" }), 1000);
+							swal({   title: "Player 1: #winning",   text: "Let's play again!",   imageUrl: "images/StrawberryMilkLgcopy.png" });
 
 						//alert("Nice job, Player 1! Let's play again!")
 
 
 					} else if (player2Score > player1Score) {
 
-						setTimeout(swal({   title: "Heck yeah, Player 2!",   text: "Let's play again!",   imageUrl: "images/tigercopy.png" }),1000);
+								swal({   title: "Heck yeah, Player 2!",   text: "Let's play again!",   imageUrl: "images/tigercopy.png" });
 
 						//alert("Way to go, Player 2! Let's play again!")
 
 
 					} else {
-
-						setTimeout(swal({   title: "It's a tie!",   text: "Let's play again!",   imageUrl: "images/sabochan.png" }), 1000);
+					swal({   title: "It's a tie!",   text: "Let's play again!",   imageUrl: "images/sabochan.png" });
 						//alert("It's a tie! Let's play again!")
 
 					};
 
 
-				//	alert("Let's play again!");
 					document.getElementById('gameboard').innerHTML = "";
 					turnCount = 0;
 					newBoard();
@@ -147,7 +144,6 @@ var player1Turn = function(){
 
 
 */
-
 var currentPlayer = function(){
 	if (turnCount %2 === 0) {
 		playerID = 1;
@@ -179,6 +175,7 @@ $('#resetButton').on('click', function(){
 	player2Score = 1;
 	$('#launchModalButton').show();
 	$('#gameboard').html(null);
+	$('#headerTitle').show();
 
 });
 
@@ -234,9 +231,12 @@ $('#playButton').on('click', function(){
 	$('#player1Name').val('');
 	$('#player2Name').val('');
 
-	/////// hide "let's get started" button
+	/////// hide "let's get started" button and "tokidoki" header title
 	$('#launchModalButton').hide();
+	$('#headerTitle').hide();
 
+	///// highlight player 1 div to start
+		$('#player1Div').css({"textShadow": "3px 2px #3FF245"});
 		////// finally, playButton will call newBoard();
 		newBoard();
 
