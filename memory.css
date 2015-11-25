@@ -47,10 +47,13 @@ div#background{
 }
 #headerTitle {
 	text-align: center;
-	font-size: 55px;
+	font-size: 60px;
 	font-family: "Righteous", sans-serif;
 	padding-top: 2%;
-	text-shadow: 2px 2px #E03FCB;
+	/* text-shadow: 2px 2px #E03FCB; 
+	background-color: rgba(255,255,255, .8);  
+	/*  text shadow color:#E03FCB; ; */
+	text-shadow: 4px 3px 3px #E03FCB;
 
 
 	
@@ -61,6 +64,9 @@ div#background{
 	font-family: "Bangers", sans-serif;
 	color: black;
 	padding-top: 5%;
+	/* text-shadow: 3px 2px #3FF245; */
+}
+#player1Div {
 	text-shadow: 3px 2px #3FF245;
 }
 
@@ -92,15 +98,37 @@ a, a:hover {
 	color: black;
 }
 
+.btn-danger {
+	/* background-color: #D63590; */
+	background-color: #77E70D;
+	/* border: 2px inset #df5386; */
+	border: 2px inset #A7EE63;
+}
+#playButton {
+	margin-left: 40px;
+	margin-right: -50px;
+	font-size: 30px;
+}
+
 .modal-title, .modal-body {
 	font-family: "Righteous";
+}
+
+.modal-title {
+	font-size: 20px;
+	color: #E03FCB;
+}
+.modal-body {
+	font-size: 18px;
+	color: #00cc00;
 }
 
 .modal-footer {
 	text-align: center;
 }
 #launchModalButton {
-	padding: 30px;
+	padding: 20px;
+	font-size: 25px;
 	
 }
 

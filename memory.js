@@ -1,16 +1,16 @@
 
 var memory_array =[
-	"dolce",
+	"donutella",
 	"porcinolg",
 	"stellinalg",
 	"lattelg",
-	"donutella",
+	"bastardinojrlg",
 	"skeletrinalg",
-	"dolce",
+	"donutella",
 	"porcinolg",
 	"stellinalg",
 	"lattelg",
-	"donutella",
+	"bastardinojrlg",
 	"skeletrinalg"
 	];
 
@@ -52,7 +52,7 @@ function newBoard(){
 
 function memoryFlipTile(tile,val){
 	if(tile.innerHTML === "" && memory_values.length < 2){
-		tile.style.background = '#FFF';
+		tile.style.background = 'none';
 		tile.innerHTML = '<img src="images/'+ val + '.png"/>';
 		//console.log(tile.innerHTML);
 		if(memory_values.length === 0){
@@ -86,7 +86,29 @@ function memoryFlipTile(tile,val){
 
 				// Check to see if the whole board is cleared
 				if(tiles_flipped === memory_array.length){
-					alert("Let's play again!");
+					if (player1Score > player2Score) {
+
+						setTimeout(swal({   title: "Player 1: #winning",   text: "Let's play again!",   imageUrl: "images/StrawberryMilkLgcopy.png" }), 1000);
+
+						//alert("Nice job, Player 1! Let's play again!")
+
+
+					} else if (player2Score > player1Score) {
+
+						setTimeout(swal({   title: "Heck yeah, Player 2!",   text: "Let's play again!",   imageUrl: "images/tigercopy.png" }),1000);
+
+						//alert("Way to go, Player 2! Let's play again!")
+
+
+					} else {
+
+						setTimeout(swal({   title: "It's a tie!",   text: "Let's play again!",   imageUrl: "images/sabochan.png" }), 1000);
+						//alert("It's a tie! Let's play again!")
+
+					};
+
+
+				//	alert("Let's play again!");
 					document.getElementById('gameboard').innerHTML = "";
 					turnCount = 0;
 					newBoard();
@@ -108,7 +130,8 @@ function memoryFlipTile(tile,val){
 
 				//// added
 					turnCount ++;
-					setTimeout(currentPlayer,700);
+					setTimeout(currentPlayer,500);
+					//currentPlayer();
 					console.log("turnCount"+turnCount);
 			}
 		}
@@ -128,11 +151,16 @@ var player1Turn = function(){
 var currentPlayer = function(){
 	if (turnCount %2 === 0) {
 		playerID = 1;
-		alert("player1, your turn"); /////instead of alert, highlight playername
+		// alert("player1, your turn");  highlight playername
+		//$('#player1Div').style.textShadow="3px 2px #3FF245";
+		$('#player1Div').css({"textShadow": "3px 2px #3FF245"});
+		$('#player2Div').css({"textShadow": ""});
 		console.log(playerID);
 	} else {
 		playerID = 2;
-		alert("player 2, your turn");
+		//alert("player 2, your turn");
+		$('#player2Div').css({"textShadow": "3px 2px #3FF245"});
+		$('#player1Div').css({"textShadow": ""});
 		console.log(playerID);
 	}
 };
