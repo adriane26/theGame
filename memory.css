@@ -1,16 +1,34 @@
 @import url(https://fonts.googleapis.com/css?family=Poiret+One|Bangers|Righteous|Lobster+Two);
 
-div#background{
+body{
 	background: url("images/kaijubkgrnd.png");
+	background-attachment: fixed;
 	background-position: center;
-	height: 100%;
-	width: 100%;
-	position: fixed;
+	min-height: 100%;
+	width: 100%; 
+	/*position: fixed;*/
 	
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
-		background-size: cover;
+		background-size: cover; 
 }
+
+
+
+
+.blurfilter {
+	filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+
+
+
+
+
+
 
 .tile {
 

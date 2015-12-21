@@ -39,7 +39,7 @@ function newBoard(){
 	var output = '';
     memory_array.memory_tile_shuffle();
 	for(var i = 0; i < memory_array.length; i++){
-		output += '<div class="tile" id="tile_'+i+'" onclick="memoryFlipTile(this,\''+memory_array[i]+'\')"></div>';
+		output += '<div class="tile col-md-6 col-md-offset-2 " id="tile_'+i+'" onclick="memoryFlipTile(this,\''+memory_array[i]+'\')"></div>';
 	}
 	document.getElementById('gameboard').innerHTML = output;
 };
@@ -49,7 +49,7 @@ function newBoard(){
 function memoryFlipTile(tile,val){
 	if(tile.innerHTML === "" && memory_values.length < 2){
 		tile.style.background = 'none';
-		tile.innerHTML = '<img src="images/'+ val +'.png"/>';
+		tile.innerHTML = '<img class="img-responsive" src="images/'+ val +'.png"/>';
 		
 		if(memory_values.length === 0){
 			memory_values.push(val);
@@ -161,6 +161,7 @@ $('#resetButton').on('click', function(){
 	$('#launchModalButton').show();
 	$('#gameboard').html(null);
 	$('#headerTitle').show();
+	
 
 });
 
@@ -193,6 +194,7 @@ $('#playButton').on('click', function(){
 	/////// hide "let's get started" button and "tokidoki" header title
 	$('#launchModalButton').hide();
 	$('#headerTitle').hide();
+	
 
 	///// highlight player 1 div to start
 	$('#player1Div').css({"textShadow": "3px 2px #3FF245"});
