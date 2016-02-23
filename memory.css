@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Poiret+One|Bangers|Righteous|Lobster+Two);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One|Bangers|Righteous);
 
 body{
 	background: url("images/kaijubkgrnd.png");
@@ -21,6 +21,7 @@ html {
 }
 
 .tile {
+
 	background: url("images/starlogo.png") no-repeat;
 	background-position: center;
 	width:115px;
